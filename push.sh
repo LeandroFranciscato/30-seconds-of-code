@@ -2,7 +2,7 @@
 
 setup_git() { 
   git config --global user.email "leandro_franciscato@hotmail.com"
-  git config --global user.name "Leandro Franciscato"
+  git config --global user.name "LeandroFranciscato"
 }
 
 commit_website_files() {  
@@ -12,7 +12,7 @@ commit_website_files() {
 }
 
 upload_files() {
-  git remote add setup-ci https://LeandroFranciscato:${SOMEVAR}@github.com/LeandroFranciscato/30-seconds-of-code.git > /dev/null 2>&1
+  git remote add setup-ci https://${SOMEVAR}@github.com/LeandroFranciscato/30-seconds-of-code.git > /dev/null 2>&1
   git push --quiet
 }
 
