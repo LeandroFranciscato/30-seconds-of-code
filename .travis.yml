@@ -1,0 +1,12 @@
+before_script:
+- npm install
+- npm install concurrently fs-extra live-server markdown-it nodemon babel-polyfill
+script:
+- npm run build-list
+after_success:
+- git update-index --add --chmod=+x push.sh
+- chmod +x push.sh
+- "./push.sh"
+env:
+  global:
+    secure: bvGxiDd+jiFmTnkXO9U2vTUAJgh0Ig6jAh9EqE9E+8cLVFJBbM9S1WQsSJ2268ArH2LJ+R1mpoHR9W5EcANohGBoHjFkUO6radxfuMpkVzRMtKtSvktLN5UiiVvlAdCx20t0tKv9tp5dJ4WT1C74kggPPEvxeQ+hPUP1M9fP+ofLbBuNudbUd3QdPT39TD3pefdbn4GdFKa1VyMy1ML37YaS6V0bbHgkZuBo9Q9EV8i6BcTInbcQg0PEVAFcxqaLWJ+vkiKdCOlw1onLtQK5y4Bp6+AZ6nMQIXg5pVvHbtmt15+cvwNr4xctwrOxFRd9NzWenWJBocoSb6B6xVbXd1E4HGvZeE2DIp5lWgQTjUMpZ/XrltJdvY5BNx1rmaG4YvTZo+7faqBR4O2YWEeL4JUW9KlqPcEHLqFlxbsFs0bc/bDS2Abgd54S6w37cnjtghQkR9ssmGIiiihqL9aPoIMsN3MUT776PW0uAHELmuyzjorxWBkppXDe7IB70NSEitrMosXmLx+SLbm92rm7IEn6xPTurb/i/hk6D4P2Qe9d5rjZCRK915g4OTrAQparsegyaw6NQz4aU1D9Na6hI0Ho8iADYkJrA14K/PWMRjnbx1eRad1jE2b3WmlNARt4Lusd12VVoKjSj08A+NEQ+GQJZt7la+BOJHabMH8yQRs=
