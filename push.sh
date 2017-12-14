@@ -6,7 +6,7 @@ setup_git() {
 }
 
 commit_website_files() {  
-  git checkout setup-ci
+  git checkout setup-ci 
   git add .
   git commit --message "Travis build"
 }
